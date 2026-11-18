@@ -1,0 +1,381 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToyNest - Play, Build, Discover</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="home">
+        <h1>Welcome to ToyNest!</h1>
+        <p>Play • Build • Discover</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#multimedia">Multimedia</a></li>
+            <li><a href="#register">Registration</a></li>
+            <li><a href="#styling">CSS Styling</a></li>
+            <li><a href="#flex-layout">Flexbox</a></li>
+            <li><a href="#positioning">Positioning</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#responsive-design">Responsive Design</a></li>
+
+            <li class="dropdown">
+                <a href="#flex-layout">Explore ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#creative-toys">Creative Toys</a></li>
+                    <li><a href="#puzzle-toys">Puzzle Games</a></li>
+                    <li><a href="#science-toys">Science Kits</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <p class="welcome">
+            Welcome to ToyNest! Learning is always an adventure!
+        </p>
+
+        <!-- Sub-Practicum 2: Multimedia -->
+        <section id="multimedia" class="multimedia">
+            <h2>Explore Our Multimedia</h2>
+
+            <div class="media-container">
+
+                <div class="media-card">
+                    <h3>Audio Experience</h3>
+                    <audio controls>
+                        <source src="ToyNest Audio.mp3" type="audio/mpeg">
+                        Your browser does not support audio.
+                    </audio>
+                </div>
+
+                <div class="media-card">
+                    <h3>Video Experience</h3>
+                    <video controls playsinline>
+                        <source src="ToyNest.mp4" type="video/mp4">
+                        Your browser does not support video.
+                    </video>
+                </div>
+
+                <div class="media-card">
+                    <h3>ToyNest Poster PDF</h3>
+                    <embed src="ToyNest_Poster.pdf"
+                           type="application/pdf"
+                           width="100%"
+                           height="300px">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sub-Practicum 3: HTML Form -->
+        <section id="register" class="form-section">
+            <h2>Kids Registration Form</h2>
+
+            <div class="form-container">
+                <form action="#" method="post">
+
+                    <label for="name">Child's Name:</label>
+                    <input type="text" id="name" name="name"
+                           placeholder="Enter child's name" required>
+
+                    <label for="email">Parent's Email:</label>
+                    <input type="email" id="email" name="email"
+                           placeholder="Enter email address" required>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone"
+                           pattern="[0-9]{10}"
+                           placeholder="10-digit phone number" required>
+
+                    <label for="age">Child's Age:</label>
+                    <input type="number" id="age" name="age"
+                           min="1" max="15" required>
+
+                    <label for="date">Preferred Date:</label>
+                    <input type="date" id="date" name="date">
+
+                    <p class="form-label">Gender:</p>
+                    <div class="radio-group">
+                        <label><input type="radio" name="gender" value="Male"> Male</label>
+                        <label><input type="radio" name="gender" value="Female"> Female</label>
+                        <label><input type="radio" name="gender" value="Other"> Other</label>
+                    </div>
+
+                    <p class="form-label">Choose Your Interests:</p>
+                    <div class="radio-group">
+                        <label><input type="checkbox" name="interest" value="Art"> Art</label>
+                        <label><input type="checkbox" name="interest" value="Science"> Science</label>
+                        <label><input type="checkbox" name="interest" value="Puzzles"> Puzzles</label>
+                    </div>
+
+                    <label for="toy">Select a Toy or Kit:</label>
+                    <select id="toy" name="toy">
+                        <option value="">Choose an option</option>
+                        <option value="Creative Toys">Creative Toys</option>
+                        <option value="Puzzle Games">Puzzle Games</option>
+                        <option value="Science Kits">Science Kits</option>
+                    </select>
+
+                    <label for="message">Additional Requirements:</label>
+                    <textarea id="message" name="message"
+                              rows="4"
+                              placeholder="Enter your requirements"></textarea>
+
+                    <button type="submit">Submit Registration</button>
+
+                </form>
+            </div>
+        </section>
+
+        <!-- Sub-Practicum 4: CSS Styling -->
+        <section id="styling" class="style-section">
+            <h2>Discover Our Creative World!</h2>
+
+            <div class="style-container">
+
+                <div class="style-card">
+                    <h3>Creative Toys</h3>
+                    <p>Explore your imagination with fun creative toys.</p>
+                    <span class="style-tag">Creativity</span>
+                </div>
+
+                <div class="style-card">
+                    <h3>Puzzle Games</h3>
+                    <p>Improve your thinking with exciting puzzles.</p>
+                    <span class="style-tag">Thinking</span>
+                </div>
+
+                <div class="style-card">
+                    <h3>Science Kits</h3>
+                    <p>Discover science through fun experiments.</p>
+                    <span class="style-tag">Learning</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sub-Practicum 5: Flexbox Layout -->
+        <section id="flex-layout" class="flex-section">
+            <h2>Explore Our Toy Collection</h2>
+
+            <div class="flex-container">
+
+                <div class="flex-card" id="creative-toys">
+                    <h3>Creative Toys</h3>
+                    <p>Build, design and create something amazing!</p>
+                </div>
+
+                <div class="flex-card" id="puzzle-toys">
+                    <h3>Puzzle Games</h3>
+                    <p>Challenge your brain with fun puzzles!</p>
+                </div>
+
+                <div class="flex-card" id="science-toys">
+                    <h3>Science Kits</h3>
+                    <p>Learn science through exciting experiments!</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sub-Practicum 6: CSS Positioning -->
+        <section id="positioning" class="position-section">
+            <h2>CSS Positioning Demonstration</h2>
+
+            <h3>Position Types and Values</h3>
+
+            <div class="position-types">
+
+                <div class="position-card">
+                    <h4>Static Position</h4>
+                    <div class="static-box">Static Element</div>
+                    <p>Default position of an HTML element.</p>
+                </div>
+
+                <div class="position-card">
+                    <h4>Relative Position</h4>
+                    <div class="relative-box">Relative Element</div>
+                    <p>Moves relative to its normal position.</p>
+                </div>
+
+                <div class="position-card">
+                    <h4>Absolute Position</h4>
+                    <div class="absolute-box">
+                        Parent Element
+                        <span>Absolute Element</span>
+                    </div>
+                    <p>Positioned relative to its nearest positioned parent.</p>
+                </div>
+
+                <div class="position-card">
+                    <h4>Fixed Position</h4>
+                    <div class="fixed-demo">Fixed Position Example</div>
+                    <p>Fixed elements stay in the same place in the viewport.</p>
+                </div>
+
+                <div class="position-card">
+                    <h4>Sticky Position</h4>
+                    <div class="sticky-box">Sticky Element</div>
+                    <p>Acts relative until it reaches the sticky offset.</p>
+                </div>
+
+            </div>
+
+            <h3>z-index Demonstration</h3>
+
+            <div class="zindex-container">
+                <div class="z-box box-one">z-index: 1</div>
+                <div class="z-box box-two">z-index: 2</div>
+                <div class="z-box box-three">z-index: 3</div>
+            </div>
+
+            <h3>Centered Responsive Quadrant Layout</h3>
+
+            <div class="quadrant-container">
+                <div class="quadrant quadrant-one"><h3>Creative</h3></div>
+                <div class="quadrant quadrant-two"><h3>Learning</h3></div>
+                <div class="quadrant quadrant-three"><h3>Playing</h3></div>
+                <div class="quadrant quadrant-four"><h3>Discovering</h3></div>
+            </div>
+        </section>
+
+        <!-- Sub-Practicum 7: Responsive Image Gallery -->
+        <section id="gallery" class="gallery-section">
+
+            <h2>Our ToyNest Image Gallery</h2>
+            <p class="gallery-description">
+                Explore our colorful collection of toys, puzzles and learning activities!
+            </p>
+
+            <div class="gallery-container">
+
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1558877385-81a1a8e6b7a9?w=600"
+                         alt="Colorful building blocks" loading="lazy">
+                    <div class="image-overlay">
+                        <h3>Building Blocks</h3>
+                        <p>Build your imagination</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1599623560574-39d485900c95?w=600"
+                         alt="Colorful toy collection" loading="lazy">
+                    <div class="image-overlay">
+                        <h3>Fun Toys</h3>
+                        <p>Play and discover</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=600"
+                         alt="Children's educational toys" loading="lazy">
+                    <div class="image-overlay">
+                        <h3>Learning Toys</h3>
+                        <p>Learn through play</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1607453998774-d533f65dac99?w=600"
+                         alt="Colorful creative toys" loading="lazy">
+                    <div class="image-overlay">
+                        <h3>Creative Play</h3>
+                        <p>Explore creativity</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1560961911-ba7ef651a56c?w=600"
+                         alt="Educational puzzle toys" loading="lazy">
+                    <div class="image-overlay">
+                        <h3>Puzzle Games</h3>
+                        <p>Challenge your mind</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=600"
+                         alt="Fun toys for kids" loading="lazy">
+                    <div class="image-overlay">
+                        <h3>Play Time</h3>
+                        <p>Make every moment fun</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sub-Practicum 8: Responsive Web Design -->
+        <section id="responsive-design" class="responsive-section">
+
+            <h2>Responsive ToyNest Collection</h2>
+
+            <p class="responsive-description">
+                Discover our amazing toys! This layout automatically adjusts
+                to desktops, tablets and mobile phones.
+            </p>
+
+            <div class="responsive-grid">
+
+                <div class="responsive-card">
+                    <img src="https://images.unsplash.com/photo-1599623560574-39d485900c95?w=600"
+                         alt="Colorful toys" loading="lazy">
+                    <h3>Colorful Toys</h3>
+                    <p>Enjoy exciting toys that make every day fun.</p>
+                </div>
+
+                <div class="responsive-card">
+                    <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=600"
+                         alt="Educational toys" loading="lazy">
+                    <h3>Learning Toys</h3>
+                    <p>Learn new things through creative play.</p>
+                </div>
+
+                <div class="responsive-card">
+                    <img src="https://images.unsplash.com/photo-1607453998774-d533f65dac99?w=600"
+                         alt="Creative play toys" loading="lazy">
+                    <h3>Creative Play</h3>
+                    <p>Develop imagination with fun activities.</p>
+                </div>
+
+                <div class="responsive-card">
+                    <img src="https://images.unsplash.com/photo-1560961911-ba7ef651a56c?w=600"
+                         alt="Puzzle games" loading="lazy">
+                    <h3>Puzzle Games</h3>
+                    <p>Improve problem-solving skills with puzzles.</p>
+                </div>
+
+                <div class="responsive-card">
+                    <img src="https://images.unsplash.com/photo-1558877385-81a1a8e6b7a9?w=600"
+                         alt="Building blocks" loading="lazy">
+                    <h3>Building Blocks</h3>
+                    <p>Build amazing creations with colorful blocks.</p>
+                </div>
+
+                <div class="responsive-card">
+                    <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=600"
+                         alt="Kids playtime" loading="lazy">
+                    <h3>Play Time</h3>
+                    <p>Make learning enjoyable with playful activities.</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 ToyNest | Making Learning Fun!</p>
+    </footer>
+
+</body>
+</html>
